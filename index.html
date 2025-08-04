@@ -5,13 +5,9 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SEO Content Strategy Tool</title>
-    
-    <!-- 你可以使用 Tailwind CDN，或者在 PostCSS 中配置它 -->
-    <!-- 为了简单起见，我们暂时保留 CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-
     <style>
-      /* 你自定义的样式可以保留 */
+      /* Custom scrollbar for webkit browsers */
       ::-webkit-scrollbar {
         width: 8px;
         height: 8px;
@@ -27,14 +23,9 @@
         background: #718096;
       }
     </style>
-    
-    <!-- 关键修正：删除了整个 <script type="importmap">...</script> 代码块 -->
-    <!-- 关键修正：删除了指向 /index.css 的 <link> -->
-    
   </head>
   <body class="bg-gray-900 text-gray-100">
     <div id="root"></div>
-    <!-- 关键修正：确保入口脚本指向 /index.tsx，Vite 会处理它 -->
     <script type="module" src="/index.tsx"></script>
   </body>
 </html>
