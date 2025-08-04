@@ -5,42 +5,36 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SEO Content Strategy Tool</title>
+    
+    <!-- 你可以使用 Tailwind CDN，或者在 PostCSS 中配置它 -->
+    <!-- 为了简单起见，我们暂时保留 CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+
     <style>
-      /* Custom scrollbar for webkit browsers */
+      /* 你自定义的样式可以保留 */
       ::-webkit-scrollbar {
         width: 8px;
         height: 8px;
       }
       ::-webkit-scrollbar-track {
-        background: #1a202c; /* dark-900 */
+        background: #1a202c;
       }
       ::-webkit-scrollbar-thumb {
-        background: #4a5568; /* gray-600 */
+        background: #4a5568;
         border-radius: 4px;
       }
       ::-webkit-scrollbar-thumb:hover {
-        background: #718096; /* gray-500 */
+        background: #718096;
       }
     </style>
-    <script type="importmap">
-      {
-        "imports": {
-          "react": "https://esm.sh/react@18.2.0",
-          "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
-          "jszip": "https://esm.sh/jszip@3.10.1",
-          "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@2",
-          "jose": "https://esm.sh/jose@5.2.4",
-          "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
-          "react/": "https://esm.sh/react@^19.1.1/"
-        }
-      }
-    </script>
-    <!-- 修正 1: 删除了不存在的 /index.css 链接 -->
+    
+    <!-- 关键修正：删除了整个 <script type="importmap">...</script> 代码块 -->
+    <!-- 关键修正：删除了指向 /index.css 的 <link> -->
+    
   </head>
   <body class="bg-gray-900 text-gray-100">
     <div id="root"></div>
-    <!-- 修正 2: 将 /index.tsx 改为 /index.tsx (如果index.tsx在根目录)，这是Vite的入口点 -->
+    <!-- 关键修正：确保入口脚本指向 /index.tsx，Vite 会处理它 -->
     <script type="module" src="/index.tsx"></script>
   </body>
 </html>
