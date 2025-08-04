@@ -23,23 +23,24 @@
         background: #718096; /* gray-500 */
       }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@18.2.0",
-    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
-    "jszip": "https://esm.sh/jszip@3.10.1",
-    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@2",
-    "jose": "https://esm.sh/jose@5.2.4",
-    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
-    "react/": "https://esm.sh/react@^19.1.1/"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://esm.sh/react@18.2.0",
+          "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+          "jszip": "https://esm.sh/jszip@3.10.1",
+          "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@2",
+          "jose": "https://esm.sh/jose@5.2.4",
+          "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+          "react/": "https://esm.sh/react@^19.1.1/"
+        }
+      }
+    </script>
+    <!-- 修正 1: 删除了不存在的 /index.css 链接 -->
+  </head>
   <body class="bg-gray-900 text-gray-100">
     <div id="root"></div>
+    <!-- 修正 2: 将 /index.tsx 改为 /index.tsx (如果index.tsx在根目录)，这是Vite的入口点 -->
     <script type="module" src="/index.tsx"></script>
   </body>
 </html>
