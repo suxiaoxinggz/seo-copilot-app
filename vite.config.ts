@@ -1,14 +1,15 @@
-// vite.config.ts
-import path from 'path';
-import { defineConfig, loadEnv } from 'vite';
+// vite.config.ts (最终正确版)
 
-export default defineConfig(({ mode }) => {
-    // const env = loadEnv(mode, '.', ''); // 这部分也不再需要了
-    return {
-      resolve: {
-        alias: {
-          '@': path.resolve(__dirname, '.'),
-        }
-      }
-    };
-});
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react' // 1. 导入 React 插件
+import path from 'path'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()], // 2. 在这里启用插件
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, '.'),
+    }
+  }
+})
